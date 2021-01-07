@@ -2,6 +2,45 @@
 home: ture
 ---
 
-# hello Vuepress
+# About
+## ken7253
+PCゲーマーです。FPSとかストラテジとかやってます。  
+主にTwitchで配信見たりしてます。配信はイベント以外だとそこまでしない。  
+
+主にゲーム関連イベントの各種デザイン及び配信技術スタッフなどでお手伝いをしています。   
+これまで行ってきた内容についてはWORKSよりご確認ください。  
+
+技術的にはフロントエンド中心ですがサーバーも触ることが多いのである程度は分かります。  
+
+## Skill
+### Design software
+- Photoshop
+- XD
+- AfterEffects
+- Dimension
+
+### Language
+- Javascript(Vue.js)
+- Typescript
+- HTML
+- CSS(Scss)
+- Go *-during study*
+- Node.js *-during study*
+
+### Other
+- Git/Github
+- WordPress
+- OBS studio
 
 <zenn-articles/>
+
+# このサイトについて
+本サイトでは下記の技術を使用しています。  
+| カテゴリ       | 名称             |
+| :------------- | :--------------- |
+| フレームワーク | Vue.js(Vuepress) |
+| ホスティング   | netlify          |
+
+# Contact
+
+ご連絡はTwitterまたはDiscord（ken7253#4915）まで。

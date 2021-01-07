@@ -10,6 +10,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
+      { text: 'Works', link: '/works/'},
       { text: 'Blog', link: '/post/'},
       { text: 'Github', link: 'https://github.com/ken7253' },
       { text: 'Twitter', link: 'https://twitter.com/ken7253_'},

@@ -1,6 +1,5 @@
 <template>
   <div class="works-list">
-    <h1>works</h1>
     <div v-if="!works">
       <p>データを取得できませんでした。</p>
     </div>

@@ -1,6 +1,5 @@
 <template>
   <div class="zenn-articles">
-    <h2>Zennの記事</h2>
     <div v-if="error.flag">
       <p>記事一覧の取得に失敗しました。</p>
       <code>{{ error.log }}</code>

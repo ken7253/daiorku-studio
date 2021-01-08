@@ -41,5 +41,5 @@ module.exports = {
       twitterCard: _ => 'summary',
     },
   },
-  dest: "./dist",
+  dest: "./docs/dist",
 };

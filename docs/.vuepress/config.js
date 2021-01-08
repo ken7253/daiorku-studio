@@ -1,9 +1,10 @@
 module.exports = {
-  head:[
-    ['meta', 
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-    ]
+  head: [
+    [
+      "meta",
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ],
   ],
   title: "dairoku-studio",
   description:
@@ -15,14 +16,14 @@ module.exports = {
   },
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Works', link: '/works'},
-      { text: 'Blog', link: '/post'},
-      { text: 'Github', link: 'https://github.com/ken7253' },
-      { text: 'Twitter', link: 'https://twitter.com/ken7253_'},
+      { text: "Home", link: "/" },
+      { text: "Works", link: "/works" },
+      { text: "Blog", link: "/post" },
+      { text: "Github", link: "https://github.com/ken7253" },
+      { text: "Twitter", link: "https://twitter.com/ken7253_" },
     ],
     displayAllHeaders: true,
-    lastUpdated: 'Last Updated',
+    lastUpdated: "Last Updated",
     smoothScroll: true,
   },
   plugins: [

@@ -2,7 +2,6 @@ module.exports = {
   head: [
     ["meta",{ charset: "utf-8" }],
     ["meta",{ name: "viewport", content: "width=device-width, initial-scale=1" }],
-    ["meta",{ name: "og:image", content: "./kenshiro.png"}]
   ],
   title: "dairoku-studio",
   description:
@@ -39,6 +38,7 @@ module.exports = {
     },
     seo: {
       twitterCard: _ => 'summary',
+      image: ($site) => $site.themeConfig.domain + "/img/kensiro.png"
     },
   },
   dest: "./docs/dist",

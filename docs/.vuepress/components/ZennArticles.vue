@@ -49,14 +49,14 @@ export default {
 <style scoped>
 .zenn-articles ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 0 -10px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .zenn-articles ul li {
-  width: 270px;
+  width: calc(960px / 4 - 30px);
+  margin: 0 0 10px 10px;
 }
 .zenn-articles ul li a {
   display: block;

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p v-if="posts">まだ投稿がありません。</p>
-    <ul v-if="!posts">
+    <p v-if="!posts">まだ投稿がありません。</p>
+    <ul v-if="posts">
       <li v-for="(post,index) in posts">
         <a :href="post.path">
           <p>{{ post.title }}</p>

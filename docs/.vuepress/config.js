@@ -42,4 +42,5 @@ module.exports = {
     '@vuepress/back-to-top': {}
   },
   dest: "./docs/dist",
+  evergreen: true,
 };

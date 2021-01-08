@@ -1,5 +1,6 @@
 ---
 home: ture
+footer: MIT Licensed | © 2021- ken7253.
 ---
 
 # About

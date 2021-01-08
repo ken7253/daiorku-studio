@@ -38,7 +38,6 @@ module.exports = {
     },
     seo: {
       twitterCard: _ => 'summary',
-      image: ($site) => $site.themeConfig.domain + "/img/kensiro.png"
     },
   },
   dest: "./docs/dist",

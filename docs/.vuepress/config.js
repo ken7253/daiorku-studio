@@ -36,9 +36,11 @@ module.exports = {
         },
       ],
     },
-    seo: {
+    "seo": {
       twitterCard: _ => 'summary',
     },
+    '@vuepress/back-to-top': {}
   },
   dest: "./docs/dist",
+  evergreen: true,
 };

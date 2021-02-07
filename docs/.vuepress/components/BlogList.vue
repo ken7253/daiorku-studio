@@ -4,7 +4,7 @@
     <ul v-if="posts">
       <li v-for="(post, index) in posts">
         <a :href="post.path">
-          <p>{{ post.title }}</p>
+          <h2>{{ post.title }}<br><span>{{post.frontmatter.description}}</span></h2>
           <p class="date">
             Date: <time v-if="post.frontmatter.date">{{ post.frontmatter.date | dateFmt() }}</time>
             Update: <time v-if="post.lastUpdated">{{ post.lastUpdated | updateFmt() }}</time>
@@ -56,11 +56,28 @@ export default {
 };
 </script>
 <style scoped>
+ul {
+  padding: 0;
+}
+li {
+  border-left: 5px solid;
+  padding: 10px;
+  background-color: #eee;
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
 li p {
   padding: 0;
   margin: 0;
 }
+li h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+li h2 span {
+  font-size: .75em;
+}
 .date {
-  font-size: 0.75rem;
+  font-size: .75rem;
 }
 </style>

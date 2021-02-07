@@ -17,6 +17,7 @@
 
 <script>
 export default {
+  name: 'blog-list',
   data: function() {
     return {
       posts: null,
@@ -24,6 +25,11 @@ export default {
   },
   created: function() {
     this.posts = this.$site.pages.filter((page) => page.id === "post");
+  },
+  computed: {
+    postsReversed(){
+      return this.posts.reverse();
+    }
   },
   filters: {
     dateFmt: function(value) {

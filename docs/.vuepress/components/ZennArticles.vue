@@ -19,6 +19,7 @@
 import axios from "axios";
 
 export default {
+  name: 'zenn-articles',
   data: function() {
     return {
       items: null,

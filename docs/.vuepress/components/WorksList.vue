@@ -22,6 +22,7 @@
 import worksData from "../public/works.json";
 
 export default {
+  name: 'works-list',
   data: function() {
     return {
       works: worksData.works,

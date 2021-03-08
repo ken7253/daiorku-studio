@@ -3,18 +3,20 @@
     <div v-if="!works">
       <p>データを取得できませんでした。</p>
     </div>
-    <ul v-if="works" v-for="(item, index) in works" :key="index" :class="index">
-      <h2>{{ index }}</h2>
-      <li v-for="(item, index) in works[index]" :key="index">
-        <dl>
-          <dt>
-            <a :href="item.link" :title="item.title">{{ item.title }}</a>
-          </dt>
-          <dd v-if="item.date"><time>{{item.date}}</time></dd>
-          <dd>{{ item.description }}</dd>
-        </dl>
-      </li>
-    </ul>
+    <div v-if="works">
+      <ul v-for="(item, index) in works" :key="index" :class="index">
+        <h2>{{ index }}</h2>
+        <li v-for="(item, index) in works[index]" :key="index">
+          <dl>
+            <dt>
+              <a :href="item.link" :title="item.title">{{ item.title }}</a>
+            </dt>
+            <dd v-if="item.date"><time>{{item.date}}</time></dd>
+            <dd>{{ item.description }}</dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 {
   "include": ["docs/**/*"],
+  "exclude": ["docs/dist/**/*"],
   "compilerOptions": {
     "baseUrl": "./docs",
     "paths": {

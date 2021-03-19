@@ -2,7 +2,7 @@
   <div>
     <p v-if="!posts">まだ投稿がありません。</p>
     <ul v-if="posts">
-      <li v-for="(post, index) in posts" :key="index">
+      <li v-for="post in posts" :key="post.key" :class="post.key">
         <a :href="post.path">
           <h2>{{ post.title }}<br><span>{{post.frontmatter.description}}</span></h2>
           <p class="date">

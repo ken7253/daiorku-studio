@@ -46,24 +46,31 @@ export default {
 };
 </script>
 
-<style scoped>
-.zenn-articles ul {
-  list-style-type: none;
-  margin: 0 0 0 -10px;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-.zenn-articles ul li {
-  width: calc(960px / 4 - 30px);
-  margin: 0 0 10px 10px;
-}
-.zenn-articles ul li a {
-  display: block;
-}
-.zenn-articles ul time {
-  display: block;
-  text-align: end;
-  font-size: 0.75rem;
+<style lang="stylus" scoped>
+.zenn-articles {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    li {
+      min-width: calc(960px / 3 - 30px);
+      //width: calc(30% - 10px);
+      margin: 0 10px 0 0;
+      flex: 1 2 calc(30% - 10px);
+
+      a {
+        display: block;
+      }
+
+      time {
+    display: block;
+    text-align: end;
+    font-size: 0.75rem;
+      }
+    }
+  }
 }
 </style>

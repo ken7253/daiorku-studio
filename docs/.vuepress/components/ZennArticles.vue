@@ -7,7 +7,7 @@
     <ul v-if="!error.flag">
       <li v-for="(item, index) in items" :key="index">
         <a :href="item.link" target="_blank" rel="noopener noreferrer">
-          <img :src="item.enclosure.link" alt="item.title" />
+          <img :src="item.enclosure.link" alt="item.title" decoding="async" loading="lazy" width="1200" height="630"/>
           <time>{{ item.pubDate }}</time>
         </a>
       </li>
@@ -63,12 +63,15 @@ export default {
 
       a {
         display: block;
+        img {
+          height: auto;
+        }
       }
 
       time {
-    display: block;
-    text-align: end;
-    font-size: 0.75rem;
+        display: block;
+        text-align: end;
+        font-size: 0.75rem;
       }
     }
   }

@@ -1,5 +1,12 @@
 {
   "works": {
+    "oss": [
+      {
+        "title": "urlQueryUtil",
+        "description": "URLQueryParameterをCSSとしてパースさせるnpmパッケージ",
+        "link": "https://www.npmjs.com/package/url-query-util"
+      }
+    ],
     "web": [
       {
         "title": "Codeing Assistant",

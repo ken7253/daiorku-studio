@@ -1,35 +1,56 @@
 <template>
   <div>
     <p v-if="!posts">まだ投稿がありません。</p>
-    <ul v-if="posts">
-      <li v-for="post in posts" :key="post.key" :class="post.key">
-        <a :href="post.path">
-          <h2>{{ post.title }}</h2>
-          <p class="date">
-            Date: <time v-if="post.frontmatter.date">{{ post.frontmatter.date | dateFmt() }}</time>
-            Update: <time v-if="post.lastUpdated">{{ post.lastUpdated | updateFmt() }}</time>
-          </p>
-          <p class="description">{{post.frontmatter.description}}</p>
-        </a>
-      </li>
-    </ul>
+    <div v-if="posts" class="post-content">
+      <ul>
+        <li v-for="post in posts" :key="post.key" :class="post.key">
+          <a :href="post.path">
+            <h2>{{ post.title }}</h2>
+            <p class="date">
+              Date:
+              <time v-if="post.frontmatter.date">{{
+                post.frontmatter.date | dateFmt()
+              }}</time>
+              Update:
+              <time v-if="post.lastUpdated">{{
+                post.lastUpdated | updateFmt()
+              }}</time>
+            </p>
+            <p class="description">{{ post.frontmatter.description }}</p>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
+import ControllerButton from './parts/ControllerButton.vue';
 export default {
-  name: 'blog-list',
+  components: {
+    ControllerButton
+  },
+  name: "blog-list",
   data: function() {
     return {
-      posts: null,
+      posts: null
     };
   },
   created: function() {
-    this.posts = this.$site.pages.filter((page) => page.id === "post");
+    this.posts = this.$site.pages.filter(page => page.id === "post");
+    this.posts.sort((first, second) => {
+      if(first.frontmatter.date > second.frontmatter.date) {
+        return -1;
+      } else if (first.frontmatter.date < second.frontmatter.date){
+        return 1;
+      } else {
+        return 0;
+      }
+    });
   },
   computed: {
-    postsReversed(){
-      return this.posts.reverse();
+    postsReversed: function() {
+      this.posts = this.posts.reverse();
     }
   },
   filters: {
@@ -45,15 +66,15 @@ export default {
         return postDate;
       }
     },
-    updateFmt: function (value) {
+    updateFmt: function(value) {
       if (!value) {
         return "";
-      }else {
-        const update = value.split(" ").shift()
+      } else {
+        const update = value.split(" ").shift();
         return update;
       }
     }
-  },
+  }
 };
 </script>
 <style lang="stylus" scoped>

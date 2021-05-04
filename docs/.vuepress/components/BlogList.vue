@@ -61,9 +61,10 @@ ul {
   padding: 0;
 
   li {
-    border-left: 5px solid;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    border-color: $borderColor;
     padding: 10px;
-    background-color: #eee;
     list-style-type: none;
     margin-bottom: 1rem;
 

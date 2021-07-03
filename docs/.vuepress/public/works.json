@@ -5,6 +5,11 @@
         "title": "urlQueryUtil",
         "description": "URLQueryParameterをCSSとしてパースさせるnpmパッケージ",
         "link": "https://www.npmjs.com/package/url-query-util"
+      },
+      {
+        "title": "shikisai",
+        "description": "CSSの色情報を管理するパッケージ（開発中）",
+        "link": "https://github.com/ken7253/shikisai"
       }
     ],
     "web": [

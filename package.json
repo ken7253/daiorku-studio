@@ -15,9 +15,10 @@
   "engines": {
     "node": ">=14.16.x"
   },
+  "engineStrict": true,
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build:docs": "vuepress build docs"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.0",

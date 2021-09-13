@@ -12,9 +12,6 @@
     "type": "git",
     "url": "https://github.com/ken7253/daiorku-studio"
   },
-  "engines": {
-    "node": ">=14.16.x"
-  },
   "engineStrict": true,
   "scripts": {
     "dev": "vuepress dev docs",

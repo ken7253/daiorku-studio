@@ -7,11 +7,11 @@
           <a :href="post.path">
             <h2>{{ post.title }}</h2>
             <p class="date">
-              Date:
-              <time v-if="post.frontmatter.date">{{
+              <img src="/img/icon/icon-pen.svg" width="10" height="10" alt="公開日" decoding="async">
+              <time v-if="post.frontmatter.date" >{{
                 post.frontmatter.date | dateFmt()
               }}</time>
-              Update:
+              <img src="/img/icon/icon-wrench.svg" width="10" height="10" alt="更新日" decoding="async">
               <time v-if="post.lastUpdated">{{
                 post.lastUpdated | updateFmt()
               }}</time>
@@ -25,11 +25,7 @@
 </template>
 
 <script>
-import ControllerButton from './parts/ControllerButton.vue';
 export default {
-  components: {
-    ControllerButton
-  },
   name: "blog-list",
   data: function() {
     return {
@@ -105,6 +101,10 @@ ul {
 
     .date {
       font-size: .75rem;
+      img {
+        width: calc(1em - 2px);
+        height: calc(1em - 2px);
+      }
     }
 
     .description {

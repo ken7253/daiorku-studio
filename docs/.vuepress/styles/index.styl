@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "SourceHanSansJP-VF";
+  src: url("/font/SourceHanSansJP-VF.otf.woff2");
+}
+
 // COMMON SETTING
 :root {
   font-size: clamp(14px, 2.5vw, 18px);
@@ -5,7 +10,7 @@
 body {
   font-size: 1rem;
   font-feature-settings: "pkna", "palt";
-  font-family: Roboto, 'Osaka', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'メイリオ', sans-serif;
+  font-family: 'SourceHanSansJP-VF', Roboto, 'Osaka', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'メイリオ', sans-serif;
   
 
   p, ul, ol {
@@ -51,7 +56,6 @@ header.navbar {
   }
 }
 .theme-container {
-  background-color: $arrowBgColor;
   main.home,
   .theme-default-content {
     background-color: #fff;

@@ -11,7 +11,9 @@
             <dt>
               <a :href="item.link" :title="item.title">{{ item.title }}</a>
             </dt>
-            <dd v-if="item.date"><time>{{item.date}}</time></dd>
+            <dd v-if="item.date">
+              <time>{{ item.date }}</time>
+            </dd>
             <dd>{{ item.description }}</dd>
           </dl>
         </li>
@@ -25,11 +27,11 @@
 import worksData from "../public/works.json";
 
 export default {
-  name: 'works-list',
-  data: function() {
+  name: "works-list",
+  data: function () {
     return {
       works: worksData.works,
-      auther: worksData.auther
+      auther: worksData.auther,
     };
   },
 };

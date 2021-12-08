@@ -1,8 +1,11 @@
 module.exports = {
   head: [
-    ["meta",{ charset: "utf-8" }],
-    ["meta",{ name: "viewport", content: "width=device-width, initial-scale=1" }],
-    ["meta",{ name: "theme-color", content: "#049dbf"}]
+    ["meta", { charset: "utf-8" }],
+    [
+      "meta",
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ],
+    ["meta", { name: "theme-color", content: "#049dbf" }],
   ],
   title: "dairoku-studio",
   description:
@@ -37,10 +40,10 @@ module.exports = {
         },
       ],
     },
-    "seo": {
-      twitterCard: _ => 'summary',
+    seo: {
+      twitterCard: (_) => "summary",
     },
-    '@vuepress/back-to-top': {}
+    "@vuepress/back-to-top": {},
   },
   dest: "./docs/dist",
   evergreen: true,

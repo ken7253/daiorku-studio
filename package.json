@@ -15,21 +15,23 @@
   "engineStrict": true,
   "scripts": {
     "dev": "vuepress dev docs",
-    "build:docs": "vuepress build docs"
+    "build:docs": "vuepress build docs",
+    "update": "ncu -i"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.8.2",
     "@vuepress/plugin-blog": "^1.9.4",
-    "eslint": "^7.32.0",
+    "eslint": "^8.4.1",
     "eslint-config-vue": "^2.0.2",
-    "eslint-plugin-vue": "^7.17.0",
+    "eslint-plugin-vue": "^8.2.0",
     "markdownlint": "^0.24.0",
+    "npm-check-updates": "^12.0.3",
     "npm-run-all": "^4.1.5",
     "vuepress": "^1.8.2",
     "vuepress-plugin-seo": "^0.1.4"
   },
   "dependencies": {
-    "axios": "^0.21.4",
+    "axios": "^0.24.0",
     "dayjs": "^1.10.7"
   }
 }

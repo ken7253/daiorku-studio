@@ -1,4 +1,7 @@
 /node_modules/
 dist/
 
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+
 # Article

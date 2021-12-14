@@ -4,11 +4,18 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  plugins: [],
+  parser: "vue-eslint-parser",
+  parserOptions: {
+    parser: "@typescript-eslint/parser",
+    project: "./tsconfig.json",
+    sourceType: "module",
+    ecmaVersion: 2021 
+  },
   extends: [
     'eslint:recommended',
-    'plugin:vue/recommended',
-    '@vue/prettier',
+    '@vue/typescript/recommended',
+    'plugin:vue/vue3-recommended',
+    'prettier'
   ],
   rules: {}
 }

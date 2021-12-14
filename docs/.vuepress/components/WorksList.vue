@@ -23,11 +23,10 @@
 </template>
 
 <script>
-// @ts-ignore
-import worksData from "../public/works.json";
+import worksData from '../public/works.json';
 
 export default {
-  name: "works-list",
+  name: 'works-list',
   data: function () {
     return {
       works: worksData.works,

@@ -7,6 +7,11 @@
       "url": "http://json.schemastore.org/tsconfig"
     }
   ],
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue"
+  ],
   "cSpell.words": [
     "dairoku",
     "markdownlint",

@@ -38,14 +38,14 @@
 
 <script>
 export default {
-  name: "blog-list",
+  name: 'blog-list',
   data: function () {
     return {
       posts: null,
     };
   },
   created: function () {
-    this.posts = this.$site.pages.filter((page) => page.id === "post");
+    this.posts = this.$site.pages.filter((page) => page.id === 'post');
     this.posts.sort((first, second) => {
       if (first.frontmatter.date > second.frontmatter.date) {
         return -1;
@@ -64,17 +64,17 @@ export default {
   filters: {
     dateFmt: function (value) {
       if (!value) {
-        return "";
+        return '';
       } else {
-        const postDate = value.split("T").shift().split("-").join("/");
+        const postDate = value.split('T').shift().split('-').join('/');
         return postDate;
       }
     },
     updateFmt: function (value) {
       if (!value) {
-        return "";
+        return '';
       } else {
-        const update = value.split(" ").shift();
+        const update = value.split(' ').shift();
         return update;
       }
     },

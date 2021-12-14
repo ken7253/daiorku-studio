@@ -31,23 +31,23 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 
 export default {
-  name: "zenn-articles",
+  name: 'zenn-articles',
   data: function () {
     return {
       maxLength: 3,
       items: null,
       error: {
         flag: false,
-        log: "",
+        log: '',
       },
     };
   },
   created: function () {
-    const base = "https://api.rss2json.com/v1/api.json";
-    const request = "?rss_url=https%3A%2F%2Fzenn.dev%2Fken7253%2Ffeed";
+    const base = 'https://api.rss2json.com/v1/api.json';
+    const request = '?rss_url=https%3A%2F%2Fzenn.dev%2Fken7253%2Ffeed';
     axios
       .get(base + request)
       .then((resp) => {

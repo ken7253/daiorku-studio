@@ -7,35 +7,47 @@
     <ul v-if="!error.flag">
       <li v-for="(item, index) in items" :key="index">
         <a :href="item.link" target="_blank" rel="noopener noreferrer">
-          <img :src="item.enclosure.link" :alt="item.title" decoding="async" loading="lazy" width="1200" height="630"/>
+          <img
+            :src="item.enclosure.link"
+            :alt="item.title"
+            decoding="async"
+            loading="lazy"
+            width="1200"
+            height="630"
+          />
           <time>{{ item.pubDate }}</time>
         </a>
       </li>
     </ul>
     <div class="zenn-articles__all">
-      <a href="https://zenn.dev/ken7253" target="_blank" rel="noopener noreferrer">記事一覧</a>
+      <a
+        href="https://zenn.dev/ken7253"
+        target="_blank"
+        rel="noopener noreferrer"
+        >記事一覧</a
+      >
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   name: 'zenn-articles',
-  data: function() {
+  data: function () {
     return {
       maxLength: 3,
       items: null,
       error: {
         flag: false,
-        log: ""
-      }
+        log: '',
+      },
     };
   },
-  created: function() {
-    const base = "https://api.rss2json.com/v1/api.json";
-    const request = "?rss_url=https%3A%2F%2Fzenn.dev%2Fken7253%2Ffeed";
+  created: function () {
+    const base = 'https://api.rss2json.com/v1/api.json';
+    const request = '?rss_url=https%3A%2F%2Fzenn.dev%2Fken7253%2Ffeed';
     axios
       .get(base + request)
       .then((resp) => {

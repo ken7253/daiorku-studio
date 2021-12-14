@@ -7,11 +7,23 @@
           <a :href="post.path">
             <h2>{{ post.title }}</h2>
             <p class="date">
-              <img src="/img/icon/icon-pen.svg" width="10" height="10" alt="公開日" decoding="async">
-              <time v-if="post.frontmatter.date" >{{
+              <img
+                src="/img/icon/icon-pen.svg"
+                width="10"
+                height="10"
+                alt="公開日"
+                decoding="async"
+              />
+              <time v-if="post.frontmatter.date">{{
                 post.frontmatter.date | dateFmt()
               }}</time>
-              <img src="/img/icon/icon-wrench.svg" width="10" height="10" alt="更新日" decoding="async">
+              <img
+                src="/img/icon/icon-wrench.svg"
+                width="10"
+                height="10"
+                alt="更新日"
+                decoding="async"
+              />
               <time v-if="post.lastUpdated">{{
                 post.lastUpdated | updateFmt()
               }}</time>
@@ -26,18 +38,18 @@
 
 <script>
 export default {
-  name: "blog-list",
-  data: function() {
+  name: 'blog-list',
+  data: function () {
     return {
-      posts: null
+      posts: null,
     };
   },
-  created: function() {
-    this.posts = this.$site.pages.filter(page => page.id === "post");
+  created: function () {
+    this.posts = this.$site.pages.filter((page) => page.id === 'post');
     this.posts.sort((first, second) => {
-      if(first.frontmatter.date > second.frontmatter.date) {
+      if (first.frontmatter.date > second.frontmatter.date) {
         return -1;
-      } else if (first.frontmatter.date < second.frontmatter.date){
+      } else if (first.frontmatter.date < second.frontmatter.date) {
         return 1;
       } else {
         return 0;
@@ -45,32 +57,28 @@ export default {
     });
   },
   computed: {
-    postsReversed: function() {
+    postsReversed: function () {
       this.posts = this.posts.reverse();
-    }
+    },
   },
   filters: {
-    dateFmt: function(value) {
+    dateFmt: function (value) {
       if (!value) {
-        return "";
+        return '';
       } else {
-        const postDate = value
-          .split("T")
-          .shift()
-          .split("-")
-          .join("/");
+        const postDate = value.split('T').shift().split('-').join('/');
         return postDate;
       }
     },
-    updateFmt: function(value) {
+    updateFmt: function (value) {
       if (!value) {
-        return "";
+        return '';
       } else {
-        const update = value.split(" ").shift();
+        const update = value.split(' ').shift();
         return update;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="stylus" scoped>

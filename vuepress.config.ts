@@ -1,10 +1,11 @@
-import { defineUserConfig } from 'vuepress-vite';
-import type { DefaultThemeOptions } from 'vuepress-vite';
+import { defineUserConfig } from "vuepress-vite";
+import type { DefaultThemeOptions } from "vuepress-vite";
 
 export default defineUserConfig<DefaultThemeOptions>({
-  lang: 'ja',
+  lang: "ja",
   title: "dairoku-studio",
-  description: "dairoku-studioという名の個人ブログ。そこまで技術的な話じゃないものはこちらで",
+  description:
+    "dairoku-studioという名の個人ブログ。そこまで技術的な話じゃないものはこちらで",
   head: [
     ["meta", { charset: "utf-8" }],
     ["meta", { name: "theme-color", content: "#049dbf" }],
@@ -18,10 +19,8 @@ export default defineUserConfig<DefaultThemeOptions>({
       { text: "Twitter", link: "https://twitter.com/ken7253_" },
     ],
     lastUpdated: true,
-    lastUpdatedText: 'Last Update'
+    lastUpdatedText: "Last Update",
   },
-  plugins: [
-    
-  ],
-  dest: './dist'
-})
+  plugins: [],
+  dest: "./dist",
+});

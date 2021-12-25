@@ -1,6 +1,7 @@
 @font-face {
   font-family: "SourceHanSansJP-VF";
-  src: url("/font/SourceHanSansJP-VF.otf.woff2");
+  src: url("/font/SourceHanSansJP-VF.otf.woff2") format("woff2");
+  font-display: fallback;
 }
 
 // COMMON SETTING
@@ -11,10 +12,14 @@ body {
   font-size: 1rem;
   font-feature-settings: "pkna", "palt";
   font-family: 'SourceHanSansJP-VF', Roboto, 'Osaka', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic', 'メイリオ', sans-serif;
-  
+  letter-spacing: .03em;
 
   p, ul, ol {
     line-height: 2.1;
+  }
+
+  a:hover {
+    opacity: .8;
   }
 }
 

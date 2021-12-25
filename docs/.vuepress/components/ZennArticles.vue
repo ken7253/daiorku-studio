@@ -12,7 +12,9 @@
         </a>
       </li>
     </ul>
-    <a class="zenn-articles__all" href="https://zenn.dev/ken7253" target="_blank" rel="noopener noreferrer">記事一覧</a>
+    <div class="zenn-articles__all">
+      <a href="https://zenn.dev/ken7253" target="_blank" rel="noopener noreferrer">記事一覧</a>
+    </div>
   </div>
 </template>
 
@@ -79,9 +81,21 @@ export default {
       }
     }
   }
-  .zenn-articles__all {
-    display: block;
-    text-align: end;
+  &__all {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      &::after {
+        content: url("/img/icon/icon-arrow.svg");
+        width: calc(1em - 2px);
+        height: calc(1em - 2px);
+        display: block;
+        transform: rotate(90deg);
+      }
+    }
   }
 }
 </style>
